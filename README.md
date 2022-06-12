@@ -1,9 +1,11 @@
+<div align="left">
 # Contact Book
+</div>
 
- This is my first laravel app which is a contact book.it has basic CRUD function i.e add ,update , delete and view contact.
+ This is my first laravel app which is a contact book with authentication.it has basic CRUD function i.e add ,update , delete and view contact.One has to register and save  their own contacts.
  
  ```bash
-Managed to understand basic fndamentals of laravel as beginner i.e database migrations ,eloquent ,Displaying Variables in Blade ,layouts , Route Naming ,
+Managed to understand basic fundamentals of laravel as a beginner i.e database migrations ,eloquent ,Displaying Variables in Blade ,layouts , Route Naming ,
 form validation e.t.c
 
 ```
