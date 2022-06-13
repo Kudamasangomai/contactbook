@@ -1,6 +1,5 @@
-<div align="left">
-## Contact Book
-</div>
+
+# Contact Book
 
  This is my first laravel app which is a contact book with authentication.it has basic CRUD function i.e add ,update , delete and view contact.One has to register and save  their own contacts.
  
