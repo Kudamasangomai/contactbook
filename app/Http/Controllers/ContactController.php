@@ -40,7 +40,7 @@ class ContactController extends Controller
 
         /*  
 
-            displayes all contact which are related to the logged in user
+            d   isplayes all contact which are related to the logged in user
             or the one the logged user added
 
         */
