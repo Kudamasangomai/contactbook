@@ -4,7 +4,7 @@
 
 
 
-
+{{-- {{ $timenow }} --}}
 
 <a href="{{ route('Aboutpage') }} ">About</a>                                   
 
