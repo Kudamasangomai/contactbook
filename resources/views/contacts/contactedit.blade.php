@@ -44,7 +44,7 @@
                 
                 </div>
             {{ Form::hidden('_method','PUT')}}
-	{{ Form::submit('Submit!');}}
+	           {{ Form::submit('Submit!');}}
 
 	{!! Form::close() !!}
 </div>
