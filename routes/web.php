@@ -31,7 +31,7 @@ Route::get('/', [App\Http\Controllers\Auth\LoginController::class, 'showLoginFor
 Auth::routes();
 Route::group(['middleware'=>'preventbackafterlogout'],function()
 {
-	Route::get('/about', [PagesController::class,'about']);
+	Route::get('/about', [PagesController::class,'about'])->name('Aboutpage');
 	Route::get('/services', [PagesController::class,'services']);
 	Route::get('/contactus', [PagesController::class,'contactus']);
 

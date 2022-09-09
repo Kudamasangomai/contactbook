@@ -9,7 +9,16 @@ class Contact extends Model
 {
     use HasFactory;
 
-
+    protected $fillable = [
+        'contact_fname',
+        'contact_lname',
+        'user_id',
+        'job',
+        'contact_email',
+        'contact_phone',
+        'cover_image'
+       
+    ];
 
     /**
      * Get the user that owns the Contact

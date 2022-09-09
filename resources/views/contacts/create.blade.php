@@ -9,13 +9,13 @@
                 <div class="form-group">
                   
         {{ Form::label('firstname', 'First name') }}
-        {{Form::text('firstname', '', ['class' => 'form-control', 'placeholder' => 'firstname'])}}
+        {{Form::text('contact_fname', '', ['class' => 'form-control', 'placeholder' => 'firstname'])}}
                   <!--<input class="form-control" placeholder="name:" name="fname">-->
                 </div>
 
          <div class="form-group">
         {{ Form::label('LastName', 'Last name') }}
-        {{Form::text('lastname', '', ['class' => 'form-control', 'placeholder' => 'lastname'])}}
+        {{Form::text('contact_lname', '', ['class' => 'form-control', 'placeholder' => 'lastname'])}}
                   <!--<input class="form-control" placeholder="name:" name="fname">-->
                 </div>
 
@@ -29,14 +29,14 @@
 
 
                         <div class="form-group">
-        {{ Form::label('email', 'Email') }}
-        {{Form::email('email', '', ['class' => 'form-control', 'placeholder' => 'kuda@gmail.com'])}}
+        {{ Form::label('contact_email', 'Email') }}
+        {{Form::email('contact_email', '', ['class' => 'form-control', 'placeholder' => 'kuda@gmail.com'])}}
                   <!--<input class="form-control" placeholder="name:" name="fname">-->
                 </div>
 
          <div class="form-group">
-        {{ Form::label('phone', 'Phone') }}
-        {{Form::text('phone', '', ['class' => 'form-control', 'placeholder' => '07776696355'])}}
+        {{ Form::label('contact_phone', 'Phone') }}
+        {{Form::text('contact_phone', '', ['class' => 'form-control', 'placeholder' => '07776696355'])}}
                   <!--<input class="form-control" placeholder="name:" name="fname">-->
                 </div>
 

@@ -8,9 +8,8 @@ importing the user Model
 */
 
 use Illuminate\Http\Request;
-
+use Illuminate\Validation\Rule;
 use App\Models\Contact;
-
 use App\Models\User;
 
 
@@ -74,7 +73,21 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        //validating the data sent from form
+
+           /* A shoter method to insert Data in to Db
+       $form = $request->validate([
+            'contact_fname' => 'required|max:20|min:3',
+            'contact_lname' => 'required',
+            'contact_email' => 'required',
+            'contact_phone' => 'required',
+            'job'=>'required',
+            'cover_image'=>'image|nullable|max:1999'
+        ]);
+        $form['user_id'] = auth()->user()->id;
+        $form['cover_image'] =  'noimage.jpg';
+        Contact::create($form);*/
+
+       // validating the data sent from form
            $this->validate($request, [
             'firstname' => 'required|max:20|min:3',
             'lastname' => 'required',
@@ -84,6 +97,10 @@ class ContactController extends Controller
          
          
         ]);
+
+
+    
+
            // Handle File Upload
         if($request->hasFile('cover_image')){
             // Get filename with the extension
@@ -96,16 +113,12 @@ class ContactController extends Controller
             $fileNameToStore= $filename.'_'.time().'.'.$extension;
             // Upload Image
             $path = $request->file('cover_image')->storeAs('public/cover_images', $fileNameToStore);
-        
-        // make thumbnails
-       /* $thumbStore = 'thumb.'.$filename.'_'.time().'.'.$extension;
-            $thumb = Image::make($request->file('cover_image')->getRealPath());
-            $thumb->resize(80, 80);
-            $thumb->save('storage/cover_images/'.$thumbStore);*/
+
         
         } else {
             $fileNameToStore = 'noimage.jpg';
         }
+       
         
         $contact  = new Contact();
         $contact->contact_fname = $request->input('firstname');
