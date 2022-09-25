@@ -6,7 +6,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\dashboardController;
-
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes/Urls(django)
@@ -17,14 +17,6 @@ use App\Http\Controllers\dashboardController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-/*Route::get('/', 'PagesController@index');
-Route::get('/', 'App\Http\Controllers\PagesController@index');
-Route::get('/about', 'App\Http\Controllers\PagesController@about');
-Route::get('/services', 'App\Http\Controllers\PagesController@services');
-Route::get('/contact', 'App\Http\Controllers\PagesController@contact');
-Route::get('/', [LoginController::class,'index']);
-*/
-
 Route::get('/', [App\Http\Controllers\Auth\LoginController::class, 'showLoginForm'])->name('login');
 
 //Route::post('/logout', [LogoutController::class, 'logout'])->middleware('auth');
